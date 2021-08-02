@@ -38,7 +38,7 @@
         level.refresh(function () {_response.get('{{url('/levels')}}',false);return _response.response;});
         student.refresh(function () {_response.get('{{url('/registrations')}}',false);return _response.response;});
         veryfied.refresh(function () {_response.get('{{url('/registrations/veryfied')}}',false);return _response.response;});
-        unveryfied.refresh(function () {_response.get('{{'/registrations/unveryfied'}}',false);return _response.response;});
+        unveryfied.refresh(function () {_response.get('{{url('/registrations/unveryfied')}}',false);return _response.response;});
         const schools = _school.make(level._first);
     </script>
     @yield('script-head')
