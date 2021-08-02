@@ -1,0 +1,33 @@
+document.getElementById('form-nama').value = 'Rina Fachriani Putri';
+document.getElementById('form-nik').value = '1234123';
+document.getElementById('form-jenis-kelamin-2').click();
+document.getElementById('form-tahun-lahir-siswa').value = '1233';
+document.getElementById('form-tempat-lahir-siswa').value = 'Surabaya';
+document.getElementById('form-alamat-siswa').value = 'Surabaya';
+
+document.getElementById('form-nama-ayah').value = 'Erwin Soerja Fachriani';
+document.getElementById('form-nik-ayah').value = '234523';
+document.getElementById('form-tahun-lahir-ayah').value = '1233';
+document.getElementById('form-tempat-lahir-ayah').value = 'Surabaya';
+document.getElementById('form-alamat-ayah').value = 'Surabaya';
+document.getElementById('form-no-hp-ayah').value = '081343373983';
+document.getElementById('form-email-ayah').value = 'erwinsj@mail.dev';
+document.getElementById('form-pekerjaan-ayah').value = 'SSS';
+document.getElementById('form-penghasilan-ayah').value = '8000000';
+
+document.getElementById('form-nama-ibu').value = 'Hernawati Tan';
+document.getElementById('form-nik-ibu').value = '2347482';
+document.getElementById('form-tahun-lahir-ibu').value = '1233';
+document.getElementById('form-tempat-lahir-ibu').value = 'Surabaya';
+document.getElementById('form-alamat-ibu').value = 'Surabaya';
+document.getElementById('form-no-hp-ibu').value = '081343373983';
+document.getElementById('form-email-ibu').value = 'erwinsj@mail.dev';
+document.getElementById('form-pekerjaan-ibu').value = 'SSS';
+document.getElementById('form-penghasilan-ibu').value = '8000000';
+
+document.getElementById('setuju').click();
+const fields = collections.collection['form-daftar'].fields;
+for (let i = 0; i < fields.length; i++) {
+    fields[i].valid = true;
+}
+collections.collection['form-daftar'].submit.disabled = false;

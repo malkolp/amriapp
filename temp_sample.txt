@@ -1,0 +1,14 @@
+_transition.in();
+                                    _tables.touch('level-data', iter_);
+                                    _response.post({async:false, url:'{{url('deleteLevel')}}', data:{level:lev.name}, file:new FormData()});
+                                    if (_response.response._status) {
+                                        _card.show('form-sekolah');
+                                        _navcard.update('amount_levels',level._len - 1);
+                                        _navcard.danger('amount_levels',1);
+                                        _tables.remove();
+                                        _card.remove('data-' + lev.name);
+                                        _sidebar.remove('list-pendaftaran', lev.id);
+                                        _sidebar.remove('list-data', lev.id);
+                                        _select.add('form-new-ip-0',{value:lev.name,label:lev.name.toUpperCase()});
+                                    }
+                                    _transition.out();
